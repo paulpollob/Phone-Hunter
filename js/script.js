@@ -1,5 +1,6 @@
 console.log("Hare Krishna");
-const load_phones = async (url) => {
+const load_phones = async (phoneName) => {
+    const url = `https://openapi.programming-hero.com/api/phones?search=${phoneName}`; 
     const res = await fetch(url);
     const data = await res.json();
     placeData(data.data);
@@ -8,7 +9,7 @@ const load_phones = async (url) => {
 
 const placeData = data => {
     const phones = document.getElementById("phones");
-    // console.log(data);
+    phones.innerHTML = ``;
     for (const phone of data) {
         console.log(phone);
         const div = document.createElement('div');
@@ -25,4 +26,10 @@ const placeData = data => {
     }
 }
 
-load_phones('https://openapi.programming-hero.com/api/phones?search=iphone');
+
+document.getElementById('search').addEventListener('click', function(){
+    console.log("Hare Krishna from button" );
+    const phoneName = document.getElementById('input').value;
+    load_phones(phoneName);
+});
+ 
