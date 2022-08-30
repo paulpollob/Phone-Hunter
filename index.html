@@ -25,7 +25,6 @@
         <section class = "container">
           <!-- search item start -->
           <form class="row g-3">
-
             <div class="col-auto">
               <label for="inputPassword2" class="visually-hidden">Password</label>
               <input type="search" class="form-control" id="input" placeholder="Search Mobile">
@@ -34,18 +33,33 @@
               <button id = "search" type="button" class="btn btn-primary mb-3">Search</button>
             </div>
           </form>
-
           <!-- search item end -->
 
 
 
 
+          <!-- spinner for load data start -->
+          <br><br><br><br>
+          <div class = "mt-5 text-center">
+            <div id = "spinner" class="spinner-border text-info mt-5 d-none" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+          <div  id = "no-result" class = "text-center d-none"><h1>No Results Found...</h1></div>
+          <!-- spinner for load data end -->
 
 
+
+          <!-- results for searches mobile start -->
           <div id = "phones" class="row row-cols-1 row-cols-md-3 g-4">
           </div>
+          <!-- resutls for searches mobile end -->
 
 
+          
+          <!-- show more button start -->
+          <div  id = "buttonShowMore" class = "d-flex justify-content-center d-none"><button class ="btn btn-primary">Show More</button></div>
+          <!-- show more button end -->
 
 
         </section>
