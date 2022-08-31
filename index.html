@@ -1,86 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <!-- bootsrtap css link start -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
-    <!-- bootstrap css link end -->
+  <!-- bootsrtap css link start -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+  <!-- bootstrap css link end -->
 
 
 
-    <title>Phone-Hunter</title>
+  <title>Phone-Hunter</title>
 </head>
+
 <body>
-    <header>
-        <H1>Hare krisha</H1>
-        <h1>Welcome to My Phone Hunter</h1>
-    </header>
+  <header class="d-flex align-items-center flex-column m-5">
+    <H1>Hare krishna</H1>
+    <h1>Welcome to My Phone Hunter</h1>
+  </header>
 
-    <main>
-        
-        <section class = "container">
-          <!-- search item start -->
-          <form class="row g-3">
-            <div class="col-auto">
-              <label for="inputPassword2" class="visually-hidden">Password</label>
-              <input type="search" class="form-control" id="input" placeholder="Search Mobile">
-            </div>
-            <div class="col-auto">
-              <button id = "search" type="button" class="btn btn-primary mb-3">Search</button>
-            </div>
-          </form>
-          <!-- search item end -->
+  <main>
 
-
-
-
-          <!-- spinner for load data start -->
-          <br><br><br><br>
-          <div class = "mt-5 text-center">
-            <div id = "spinner" class="spinner-border text-info mt-5 d-none" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
+    <section class="container">
+      <!-- search item start -->
+      <div class="d-flex align-items-center justify-content-center m-5">
+        <div class="row g-3 text-center">
+          <div class="col-auto">
+            <input type="search" class="form-control" id="phoneInput" placeholder="Search Mobile">
           </div>
-          <div  id = "no-result" class = "text-center d-none"><h1>No Results Found...</h1></div>
-          <!-- spinner for load data end -->
-
-
-
-          <!-- results for searches mobile start -->
-          <div id = "phones" class="row row-cols-1 row-cols-md-3 g-4">
+          <div class="col-auto">
+            <button id="search" type="button" class="btn btn-primary mb-3">Search</button>
           </div>
-          <!-- resutls for searches mobile end -->
+        </div>
+      </div>
+      <!-- search item end -->
 
 
-          
-          <!-- show more button start -->
-          <div  id = "buttonShowMore" class = "d-flex justify-content-center d-none"><button class ="btn btn-primary">Show More</button></div>
-          <!-- show more button end -->
 
 
-          <!-- Vertically centered modal start -->
+      <!-- spinner for load data start -->
+      <br><br><br><br>
+      <div class="mt-5 text-center">
+        <div id="spinner" class="spinner-border text-info mt-5 d-none" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+      <div id="no-result" class="text-center d-none">
+        <h1>No Results Found...</h1>
+      </div>
+      <!-- spinner for load data end -->
+
+
+
+      <!-- results for searches mobile start -->
+      <div id="phones" class="row row-cols-1 row-cols-md-3 g-4">
+      </div>
+      <!-- resutls for searches mobile end -->
+
+
+
+      <!-- show more button start -->
+      <div id="buttonShowMore" class="d-flex justify-content-center d-none"><button class="btn btn-primary">Show
+          More</button></div>
+      <!-- show more button end -->
+
+     
+
+
+
+      <div id = "modal">
+        <div class="modal fade" id="phoneDetails" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
-            ...
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">${data.name}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div id = "modalBody" class="modal-body">
+                <ul id = "mainFeatures">
+                  <li>Hare krishna
+                    <li>RAdhe RAdhae</li>
+                  </li>
+                </ul>  
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
           </div>
-          <!-- Vertically centered modal end -->
+        </div>
+      </div>
+
+      
+
+    </section>
+  </main>
 
 
-        </section>
-    </main>
+  <!-- bootstrap script file start -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- bootstrap script file end -->
 
 
-    <!-- bootstrap script file start -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- bootstrap script file end -->
-    
+  <!-- script file for load data start -->
+  <script src="js/script.js"></script>
+  <!-- script file for load data end -->
 
-    <!-- script file for load data start -->
-    <script src="js/script.js"></script>
-    <!-- script file for load data end -->
-    
 </body>
+
 </html>
